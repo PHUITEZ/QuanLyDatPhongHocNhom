@@ -1,4 +1,5 @@
 package interfaces;
 
-public class BookingValidator {
+public interface BookingValidator {
+    boolean validateBooking();
 }

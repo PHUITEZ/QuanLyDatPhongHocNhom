@@ -1,4 +1,5 @@
 package interfaces;
 
-public class RoomFeePolicy {
+public interface RoomFeePolicy {
+    double calculateFee(int hours);
 }

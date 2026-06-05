@@ -1,4 +1,6 @@
 package interfaces;
 
-public class Bookable {
+public interface Bookable {
+    boolean bookRoom();
+    boolean cancelBooking();
 }
