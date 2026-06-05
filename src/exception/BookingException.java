@@ -1,4 +1,7 @@
 package exception;
 
-public class BookingException {
+public class BookingException extends exception {
+    public BookingException(String message) {
+        super(message);
+    }
 }
