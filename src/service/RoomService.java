@@ -21,7 +21,7 @@ public class RoomService {
         return rooms.stream()
                 .filter(r -> r.getRoomId().equalsIgnoreCase(roomId))
                 .findFirst()
-                .orElseThrow(() -> new BookingException("Lỗi: Phòng có mã " + roomId + " không tồn tại!"));
+                .orElseThrow(() -> new BookingException("Loi: Phong co ma " + roomId + " khong ton tai!"));
     }
 
     public List<Room> findRoomsByType(String roomType) {
