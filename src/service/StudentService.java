@@ -20,6 +20,6 @@ public class StudentService {
         return students.stream()
                 .filter(s -> s.getStudentId().equalsIgnoreCase(studentId))
                 .findFirst()
-                .orElseThrow(() -> new BookingException("Lỗi: Sinh viên có mã " + studentId + " không tồn tại trong hệ thống!"));
+                .orElseThrow(() -> new BookingException("Loi: Sinh vien co ma " + studentId + " khong ton tai trong he thong!"));
     }
 }
