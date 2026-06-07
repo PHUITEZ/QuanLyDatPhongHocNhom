@@ -4,16 +4,12 @@ import interfaces.Bookable;
 import interfaces.RoomFeePolicy;
 
 public abstract class Room implements Bookable, RoomFeePolicy {
+    private String roomId;
+    private String roomName;
+    private int capacity;
+    private boolean available;
 
-    protected String roomId;
-    protected String roomName;
-    protected int capacity;
-    protected boolean available;
-
-    public Room(String roomId,
-                String roomName,
-                int capacity) {
-
+    public Room(String roomId, String roomName, int capacity) {
         this.roomId = roomId;
         this.roomName = roomName;
         this.capacity = capacity;
@@ -48,27 +44,28 @@ public abstract class Room implements Bookable, RoomFeePolicy {
         return available;
     }
 
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
+
     @Override
     public boolean bookRoom() {
-
         if (available) {
             available = false;
             return true;
         }
-
         return false;
     }
 
     @Override
     public boolean cancelBooking() {
-
         if (!available) {
             available = true;
             return true;
         }
-
         return false;
     }
+
 
     public abstract void displayInfo();
 }
