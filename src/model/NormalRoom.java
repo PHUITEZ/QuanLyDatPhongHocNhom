@@ -2,16 +2,13 @@ package model;
 
 public class NormalRoom extends Room {
 
-    public NormalRoom(String roomId,
-                      String roomName,
-                      int capacity) {
-
+    public NormalRoom(String roomId, String roomName, int capacity) {
         super(roomId, roomName, capacity);
     }
 
     @Override
     public double calculateFee(int hours) {
-        return hours * 10000;
+        return 0;
     }
 
     @Override
@@ -19,11 +16,11 @@ public class NormalRoom extends Room {
 
         System.out.println(
                 "Normal Room | ID: "
-                        + roomId
+                        + getRoomId
                         + " | Name: "
-                        + roomName
+                        + getRoomName
                         + " | Capacity: "
-                        + capacity
+                        + getCapacity
         );
     }
 }

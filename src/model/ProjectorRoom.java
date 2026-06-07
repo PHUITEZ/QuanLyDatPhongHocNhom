@@ -4,10 +4,7 @@ public class ProjectorRoom extends Room {
 
     private int projectorCount;
 
-    public ProjectorRoom(String roomId,
-                         String roomName,
-                         int capacity,
-                         int projectorCount) {
+    public ProjectorRoom(String roomId, String roomName, int capacity, int projectorCount) {
 
         super(roomId, roomName, capacity);
         this.projectorCount = projectorCount;
@@ -23,6 +20,7 @@ public class ProjectorRoom extends Room {
 
     @Override
     public double calculateFee(int hours) {
+
         return hours * 20000;
     }
 
@@ -31,11 +29,11 @@ public class ProjectorRoom extends Room {
 
         System.out.println(
                 "Projector Room | ID: "
-                        + roomId
+                        + getRoomID
                         + " | Name: "
-                        + roomName
+                        + getRoomName
                         + " | Capacity: "
-                        + capacity
+                        + getCapacity
                         + " | Projectors: "
                         + projectorCount
         );
