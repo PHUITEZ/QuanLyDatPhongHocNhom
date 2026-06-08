@@ -2,23 +2,11 @@ package model;
 
 public class SeminarRoom extends Room {
 
-    private boolean soundSystem;
-
-    public SeminarRoom(String roomId, String roomName, int capacity, boolean soundSystem) {
+    public SeminarRoom(String roomId, String roomName, int capacity) {
 
         super(roomId, roomName, capacity);
-        this.soundSystem = soundSystem;
     }
 
-    public boolean isSoundSystem() {
-
-        return soundSystem;
-    }
-
-    public void setSoundSystem(boolean soundSystem) {
-
-        this.soundSystem = soundSystem;
-    }
 
     @Override
     public double calculateFee(int hours) {
@@ -35,9 +23,6 @@ public class SeminarRoom extends Room {
                         + " | Name: "
                         + getRoomName
                         + " | Capacity: "
-                        + getCapacity
-                        + " | Sound System: "
-                        + soundSystem
-        );
+                        + getCapacity);
     }
 }
