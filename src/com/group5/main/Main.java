@@ -7,32 +7,40 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Room room1 =
-                new NormalRoom(
-                        IdGenerator.generateRoomId(),
-                        "A101",
-                        20);
+        Room room1 = new NormalRoom(
+                IdGenerator.generateRoomId(),
+                "A6:401-402",
+                1,
+                20,
+                "AVAILABLE"
+        );
 
-        Room room2 =
-                new ProjectorRoom(
-                        IdGenerator.generateRoomId(),
-                        "B202",
-                        30,
-                        2);
+        Room room2 = new ProjectorRoom(
+                IdGenerator.generateRoomId(),
+                "A2:201-202",
+                2,
+                30,
+                "AVAILABLE"
+        );
 
-        Room room3 =
-                new SeminarRoom(
-                        IdGenerator.generateRoomId(),
-                        "C303",
-                        100,
-                        true);
+        Room room3 = new SeminarRoom(
+                IdGenerator.generateRoomId(),
+                "A4:405-406",
+                3,
+                100,
+                "AVAILABLE"
+        );
 
-        room1.displayInfo();
-        room2.displayInfo();
-        room3.displayInfo();
+        System.out.println(room1.getRoomName());
+        System.out.println(room2.getRoomName());
+        System.out.println(room3.getRoomName());
 
         System.out.println(
-                room2.calculateFee(3)
+                room2.getFeePolicy().calculateFee(2)
+        );
+
+        System.out.println(
+                room3.getFeePolicy().calculateFee(2)
         );
     }
 }
