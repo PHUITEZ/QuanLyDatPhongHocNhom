@@ -1,23 +1,40 @@
 package model;
+
 import java.io.Serializable;
 
+// Lớp cha trừu tượng (Abstraction) - người dùng không được tạo trực tiếp đối tượng User
 public abstract class User implements Serializable {
-    private static final long serialVersionUID = 1L;
     private String fullName;
-    private String phoneNumber;
+    private String phone;
     private String email;
 
-    public User() {}
-    public User(String fullName, String phoneNumber, String email) {
+    public User(String fullName, String phone, String email) {
         this.fullName = fullName;
-        this.phoneNumber = phoneNumber;
+        this.phone = phone;
         this.email = email;
     }
 
-    public String getFullName() { return fullName; }
-    public void setFullName(String fullName) { this.fullName = fullName; }
-    public String getPhoneNumber() { return phoneNumber; }
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
