@@ -16,7 +16,7 @@ public class FileUtils {
             for (Room room : rooms) {
 
                 writer.write(
-                        room.getRoomId() + "," + room.getRoomName() + "," + room.getCapacity() + "\n");
+                        room.getRoomId() + "," + room.getRoomName() + "," + room.getMaxCapacity() + "\n");
             }
 
             System.out.println("Luu file thanh cong!");
