@@ -1,19 +1,23 @@
 package model;
 
-import interfaces.Bookable;
-import interfaces.RoomFeePolicy;
-
-public abstract class Room implements Bookable, RoomFeePolicy {
+public abstract class Room {
     private String roomId;
     private String roomName;
-    private int capacity;
-    private boolean available;
+    private int floor;
+    private int maxCapacity;
+    private String status;
+    private RoomFeePolicy feePolicy;
 
-    public Room(String roomId, String roomName, int capacity) {
+    public Room() {
+    }
+
+    public Room(String roomId, String roomName, int floor, int maxCapacity, String status, RoomFeePolicy feePolicy) {
         this.roomId = roomId;
         this.roomName = roomName;
-        this.capacity = capacity;
-        this.available = true;
+        this.floor = floor;
+        this.maxCapacity = maxCapacity;
+        this.status = status;
+        this.feePolicy = feePolicy;
     }
 
     public String getRoomId() {
@@ -32,40 +36,35 @@ public abstract class Room implements Bookable, RoomFeePolicy {
         this.roomName = roomName;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public int getFloor() {
+        return floor;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setFloor(int floor) {
+        this.floor = floor;
     }
 
-    public boolean isAvailable() {
-        return available;
+    public int getMaxCapacity() {
+        return maxCapacity;
     }
 
-    public void setAvailable(boolean available) {
-        this.available = available;
+    public void setMaxCapacity(int maxCapacity) {
+        this.maxCapacity = maxCapacity;
     }
 
-    @Override
-    public boolean bookRoom() {
-        if (available) {
-            available = false;
-            return true;
-        }
-        return false;
+    public String getStatus() {
+        return status;
     }
 
-    @Override
-    public boolean cancelBooking() {
-        if (!available) {
-            available = true;
-            return true;
-        }
-        return false;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
+    public RoomFeePolicy getFeePolicy() {
+        return feePolicy;
+    }
 
-    public abstract void displayInfo();
+    public void setFeePolicy(RoomFeePolicy feePolicy) {
+        this.feePolicy = feePolicy;
+    }
 }

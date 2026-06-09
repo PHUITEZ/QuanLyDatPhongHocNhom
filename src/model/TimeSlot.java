@@ -1,33 +1,32 @@
 package model;
 
-import java.io.Serializable;
+import java.time.LocalDateTime;
 
-// Lớp này không kế thừa ai, chỉ dùng để gom nhóm thời gian
-public class TimeSlot implements Serializable {
-    // Đóng gói dữ liệu (Encapsulation)
-    private String startTime;
-    private String endTime;
+public class TimeSlot {
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 
-    // Constructor có tham số
-    public TimeSlot(String startTime, String endTime) {
+    public TimeSlot() {
+    }
+
+    public TimeSlot(LocalDateTime startTime, LocalDateTime endTime) {
         this.startTime = startTime;
         this.endTime = endTime;
     }
 
-    // Các hàm getter/setter để truy xuất dữ liệu an toàn
-    public String getStartTime() {
+    public LocalDateTime getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 }

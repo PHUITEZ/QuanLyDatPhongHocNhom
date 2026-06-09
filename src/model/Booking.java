@@ -1,20 +1,25 @@
 package model;
 
-import java.io.Serializable;
-
-public class Booking implements Serializable {
+public class Booking {
     private String bookingId;
     private Student student;
     private Room room;
     private TimeSlot timeSlot;
-    private BookingStatus status;
+    private int numberOfParticipants;
+    private String status;
+    private double totalFee;
 
-    public Booking(String bookingId, Student student, Room room, TimeSlot timeSlot, BookingStatus status) {
+    public Booking() {
+    }
+
+    public Booking(String bookingId, Student student, Room room, TimeSlot timeSlot, int numberOfParticipants, String status, double totalFee) {
         this.bookingId = bookingId;
         this.student = student;
         this.room = room;
         this.timeSlot = timeSlot;
+        this.numberOfParticipants = numberOfParticipants;
         this.status = status;
+        this.totalFee = totalFee;
     }
 
     public String getBookingId() {
@@ -49,11 +54,27 @@ public class Booking implements Serializable {
         this.timeSlot = timeSlot;
     }
 
-    public BookingStatus getStatus() {
+    public int getNumberOfParticipants() {
+        return numberOfParticipants;
+    }
+
+    public void setNumberOfParticipants(int numberOfParticipants) {
+        this.numberOfParticipants = numberOfParticipants;
+    }
+
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(BookingStatus status) {
+    public void setStatus(String status) {
         this.status = status;
+    }
+
+    public double getTotalFee() {
+        return totalFee;
+    }
+
+    public void setTotalFee(double totalFee) {
+        this.totalFee = totalFee;
     }
 }
