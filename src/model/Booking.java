@@ -58,7 +58,8 @@ public class Booking {
         return numberOfParticipants;
     }
 
-    public void setNumberOfParticipants(int numberOfParticipants) {
+    public void setNumberOfParticipants(
+            int numberOfParticipants) {
         this.numberOfParticipants = numberOfParticipants;
     }
 
