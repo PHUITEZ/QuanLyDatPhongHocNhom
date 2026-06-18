@@ -1,11 +1,12 @@
 package model;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 public abstract class Room {
     private String roomId;
     private String roomName;
     private int floor;
     private int maxCapacity;
     private String status;
+    @JsonIgnore
     private RoomFeePolicy feePolicy;
 
     public Room() {
