@@ -1,0 +1,14 @@
+body{
+    background-color:#f4f6f9;
+    font-family:Arial, sans-serif;
+}
+
+h1,h2{
+    text-align:center;
+    margin:20px;
+}
+
+table{
+    width:100%;
+    background:white;
+}
