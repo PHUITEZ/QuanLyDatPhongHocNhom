@@ -2,17 +2,26 @@ package com.group5.main.service;
 
 import com.group5.main.exception.BookingException;
 import com.group5.main.model.Room;
+import com.group5.main.repository.RoomRepository;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class RoomService {
 
-    private List<Room> rooms = new ArrayList<>();
+    private final RoomRepository roomRepository = new RoomRepository();
+
+    private List<Room> rooms;
+
+    public RoomService() {
+        rooms = roomRepository.loadRooms();
+    }
 
     public void addRoom(Room room) {
         rooms.add(room);
+        roomRepository.saveRooms(rooms);
     }
 
     public List<Room> getAllRooms() {
@@ -26,7 +35,9 @@ public class RoomService {
                 .findFirst()
                 .orElseThrow(() ->
                         new BookingException(
-                                "Loi: Phong co ma " + roomId + " khong ton tai!"
+                                "Loi: Phong co ma "
+                                        + roomId
+                                        + " khong ton tai!"
                         ));
     }
 
@@ -34,8 +45,13 @@ public class RoomService {
 
         return rooms.stream()
                 .filter(r ->
-                        r.getClass().getSimpleName()
+                        r.getClass()
+                                .getSimpleName()
                                 .equalsIgnoreCase(roomType))
                 .collect(Collectors.toList());
+    }
+
+    public void saveData() {
+        roomRepository.saveRooms(rooms);
     }
 }
