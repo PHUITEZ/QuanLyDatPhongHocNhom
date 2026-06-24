@@ -1,7 +1,13 @@
 package com.group5.main.service;
+
+import com.group5.main.exception.BookingException;
+import com.group5.main.model.Student;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class StudentService {
+
     private List<Student> students = new ArrayList<>();
 
     public void addStudent(Student student) {
@@ -13,9 +19,13 @@ public class StudentService {
     }
 
     public Student findStudentById(String studentId) throws BookingException {
+
         return students.stream()
                 .filter(s -> s.getStudentId().equalsIgnoreCase(studentId))
                 .findFirst()
-                .orElseThrow(() -> new BookingException("Loi: Sinh vien co ma " + studentId + " khong ton tai trong he thong!"));
+                .orElseThrow(() ->
+                        new BookingException(
+                                "Loi: Sinh vien co ma " + studentId + " khong ton tai!"
+                        ));
     }
 }
