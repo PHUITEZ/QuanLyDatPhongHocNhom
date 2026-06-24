@@ -7,10 +7,11 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.List;
 public class RoomRepository {
 
     // Ghi dữ liệu mảng ArrayList xuống file
-    public void saveRooms(ArrayList<Room> dsPhong) {
+    public void saveRooms(List<Room> dsPhong){
         try {
             FileOutputStream fos = new FileOutputStream("rooms.dat");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
