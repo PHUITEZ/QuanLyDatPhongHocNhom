@@ -9,6 +9,7 @@ com/group5/main/model/ProjectorRoom.class
 com/group5/main/model/TimeSlot.class
 com/group5/main/model/SeminarRoom.class
 com/group5/main/service/RoomService.class
+com/group5/main/controller/RoomController.class
 com/group5/main/model/BookingStatus.class
 com/group5/main/utils/IdGenerator.class
 com/group5/main/interfaces/RoomFeePolicy.class
