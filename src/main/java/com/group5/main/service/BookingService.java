@@ -1,4 +1,11 @@
 package com.group5.main.service;
+
+import com.group5.main.exception.BookingException;
+import com.group5.main.model.Booking;
+import com.group5.main.model.Room;
+import com.group5.main.model.Student;
+import com.group5.main.model.TimeSlot;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
