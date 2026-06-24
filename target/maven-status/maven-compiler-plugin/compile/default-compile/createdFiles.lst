@@ -7,6 +7,7 @@ com/group5/main/service/StudentService.class
 com/group5/main/exception/BookingException.class
 com/group5/main/model/ProjectorRoom.class
 com/group5/main/model/TimeSlot.class
+com/group5/main/controller/StudentController.class
 com/group5/main/model/SeminarRoom.class
 com/group5/main/service/RoomService.class
 com/group5/main/controller/RoomController.class
@@ -18,6 +19,7 @@ com/group5/main/model/User.class
 com/group5/main/model/Room.class
 com/group5/main/repository/BookingRepository.class
 com/group5/main/model/RoomStatus.class
+com/group5/main/controller/BookingController.class
 com/group5/main/interfaces/Bookable.class
 com/group5/main/ApiApplication.class
 com/group5/main/interfaces/BookingValidator.class
