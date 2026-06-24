@@ -168,4 +168,5 @@ public class BookingService {
                 slot1.getEndTime()
                         .isAfter(slot2.getStartTime());
     }
+
 }
