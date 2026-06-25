@@ -22,7 +22,6 @@ public class ApiApplication {
 
         RoomService service = new RoomService();
 
-        // Normal Rooms
         service.addRoom(new NormalRoom(
                 "R001", "Phong Hoc 101", 1, 10, "San sang"));
 
@@ -32,7 +31,6 @@ public class ApiApplication {
         service.addRoom(new NormalRoom(
                 "R003", "Phong Hoc 103", 2, 20, "San sang"));
 
-        // Projector Rooms
         service.addRoom(new ProjectorRoom(
                 "R004", "Phong May Chieu A", 2, 25, "San sang"));
 
@@ -42,7 +40,6 @@ public class ApiApplication {
         service.addRoom(new ProjectorRoom(
                 "R006", "Phong May Chieu C", 3, 35, "San sang"));
 
-        // Seminar Rooms
         service.addRoom(new SeminarRoom(
                 "R007", "Phong Hoi Thao A", 4, 50, "San sang"));
 
