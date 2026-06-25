@@ -19,6 +19,7 @@
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/model/User.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/repository/BookingRepository.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/repository/RoomRepository.java
+/Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/repository/StudentRepository.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/service/BookingService.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/service/RoomService.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/service/StudentService.java
