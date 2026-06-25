@@ -11,6 +11,7 @@ com/group5/main/controller/StudentController.class
 com/group5/main/model/SeminarRoom.class
 com/group5/main/service/RoomService.class
 com/group5/main/controller/RoomController.class
+com/group5/main/controller/PageController.class
 com/group5/main/model/BookingStatus.class
 com/group5/main/utils/IdGenerator.class
 com/group5/main/interfaces/RoomFeePolicy.class
