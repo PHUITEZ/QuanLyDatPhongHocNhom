@@ -1,6 +1,11 @@
 package com.group5.main.model;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String studentId;
     private String fullName;
     private String phoneNumber;
@@ -10,7 +15,11 @@ public class Student {
     public Student() {
     }
 
-    public Student(String studentId, String fullName, String phoneNumber, String className, String email) {
+    public Student(String studentId,
+                   String fullName,
+                   String phoneNumber,
+                   String className,
+                   String email) {
         this.studentId = studentId;
         this.fullName = fullName;
         this.phoneNumber = phoneNumber;
