@@ -22,5 +22,6 @@ com/group5/main/repository/BookingRepository.class
 com/group5/main/model/RoomStatus.class
 com/group5/main/controller/BookingController.class
 com/group5/main/interfaces/Bookable.class
+com/group5/main/repository/StudentRepository.class
 com/group5/main/ApiApplication.class
 com/group5/main/interfaces/BookingValidator.class
