@@ -3,19 +3,27 @@ package com.group5.main.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.group5.main.interfaces.RoomFeePolicy;
 
-public abstract class Room {
+import java.io.Serializable;
+
+public abstract class Room implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String roomId;
     private String roomName;
     private int floor;
     private int maxCapacity;
     private String status;
+
     @JsonIgnore
-    private RoomFeePolicy feePolicy;
+    private transient RoomFeePolicy feePolicy;
 
     public Room() {
     }
 
-    public Room(String roomId, String roomName, int floor, int maxCapacity, String status, RoomFeePolicy feePolicy) {
+    public Room(String roomId, String roomName, int floor,
+                int maxCapacity, String status,
+                RoomFeePolicy feePolicy) {
         this.roomId = roomId;
         this.roomName = roomName;
         this.floor = floor;
