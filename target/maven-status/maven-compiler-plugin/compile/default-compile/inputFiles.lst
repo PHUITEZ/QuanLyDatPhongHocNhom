@@ -1,5 +1,6 @@
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/ApiApplication.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/controller/BookingController.java
+/Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/controller/PageController.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/controller/RoomController.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/controller/StudentController.java
 /Users/nguyenvanphu/Desktop/QuanLyDatPhongHocNhom/src/main/java/com/group5/main/exception/BookingException.java
