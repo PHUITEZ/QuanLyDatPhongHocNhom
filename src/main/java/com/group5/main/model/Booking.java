@@ -1,6 +1,11 @@
 package com.group5.main.model;
 
-public class Booking {
+import java.io.Serializable;
+
+public class Booking implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private String bookingId;
     private Student student;
     private Room room;
@@ -12,7 +17,14 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(String bookingId, Student student, Room room, TimeSlot timeSlot, int numberOfParticipants, String status, double totalFee) {
+    public Booking(String bookingId,
+                   Student student,
+                   Room room,
+                   TimeSlot timeSlot,
+                   int numberOfParticipants,
+                   String status,
+                   double totalFee) {
+
         this.bookingId = bookingId;
         this.student = student;
         this.room = room;
@@ -58,8 +70,7 @@ public class Booking {
         return numberOfParticipants;
     }
 
-    public void setNumberOfParticipants(
-            int numberOfParticipants) {
+    public void setNumberOfParticipants(int numberOfParticipants) {
         this.numberOfParticipants = numberOfParticipants;
     }
 
